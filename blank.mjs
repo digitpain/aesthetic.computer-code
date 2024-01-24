@@ -1,6 +1,11 @@
 // $NAME, $TIMESTAMP
 // $THIS_IS_A_TEMPLATE_FOR_MAKING_NEW_PIECES
 
+/* #region ⭐️ Setup
+  - Install the `aesthetic.computer` extension to the left.
+  - Tap the new 🌀 Spiral icon and follow the instructions in the panel.
+*/
+
 /* #region 📚 README 
   - Welcome to your first aesthetic.computer piece.
   - You can `console.log(api);` to explore,
