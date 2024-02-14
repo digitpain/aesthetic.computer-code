@@ -2,68 +2,19 @@
 // A blank aesthetic.computer piece.
 
 /* #region 📚 README 
-  1.) Tap 🪟 Extensions icon on the left sidebar and install
-      the `aesthetic.computer` extension.
-  2.) Tap the added 🌀 Spiral icon to open the `prompt`.
-  3.) Code below, saving the file to run the piece.
-
-  ❓  Enter `help` for the AC #help and ping @helper for additional explanation.
+  1.) Tap 🪟 Extensions icon on the left sidebar. Search for the
+      `Aesthetic Computer` extension and install it.
+  2.) Tap the new 🚪 icon in the sidebar to open the `prompt`.
+  3.) Edit the code below and save this file to run the piece.
+  4.) Enter `publish` in the `prompt` to put your work online.
+  ❓  Enter `help` in `prompt` and ping `@helper` for personal support.
 #endregion */
 
-export { boot, paint, act };
-
-// @jeffrey/2024.2.09.17.15.55.202
-let painting;
-
-function boot({ get }) {
-  // get
-  //   .painting("jeffreyface")
-  //   .by("@jeffrey")
-  //   .then(({ img }) => {
-  //     painting = img;
-  //   });
+function paint({ wipe }) {
+  wipe("blue").ink().line();
 }
 
-function paint($) {
-  $.wipe("red");
-  $.ink("lime").line(); // Would draw a diagonal line.
-  $.paste(painting, $.pen.x, $.pen.y);
-}
-
-function act({ event: e, jump }) {
-  if (e.is("keyboard:down:f")) {
-    jump("@reas/blank");
-  }
-}
-
-// function sim() {
-//  // Runs once per logic frame. (120fps locked.)
-// }
-
-// function beat() {
-//   // Runs once per metronomic BPM.
-// }
-
-// function leave() {
-//  // Runs once before the piece is unloaded.
-// }
-
-// function meta() {
-//   return {
-//     title: "Blank",
-//     desc: "A blank aesthetic.computer piece.",
-//   };
-// }
-
-// function preview({ ink, wipe }) {
-// Render a custom thumbnail image.
-// }
-
-// function icon() {
-// Render an application icon, aka favicon.
-// }
-
-// export { boot, meta };
+export { paint };
 
 // 📚 Library
 //   (Useful functions used throughout the piece)
