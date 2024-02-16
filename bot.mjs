@@ -1,60 +1,26 @@
 // Bot, 24.02.13.18.53
 // The most basic bot.
 
-// TODO
-// - Make sure `copied` works by default.
-// - Allow a default image or painting to be put in the bottom?
+const prompt = "Hi there @!"; // The greeting message. 🗨️
 
-const prompt = "whats on your mind, @?"; // TODO: Replace this with the user
-//                                                handle... ⭐
+// ❓ Every `bot` is a sandwich of text, which can be helpful for reinforcement.
 
-const before = `your name is gargoyle
-  and you are replying to:`;
+const before = `You are very rude, and you are responding to:`;
+// 💁 The user's text gets added here!
+const after = `Please limit all responses to 99 characters!`;
 
-const after = `
-  - and you respond in metaphor
-  - all responses are limited to 99 characters
-  - all responses provide advice
-  - you don't talk about gargoyles
-  - some responses include questions
-  - your tone is friendly
-  `;
-
-// ⭐ TODO: Make it so that normal color strings can be used here!
 const scheme = {
-  dark: {
-    fg: [0, 200, 0, 300],
-    bg: [130, 20, 100, 200],
-    fgu: [220, 210, 10],
-    block: [200, 130, 10],
-    blockHi: [200, 100, 0],
-    line: [0, 200, 0, 300],
-  },
-  light: {
-    fg: [0, 200],
-    bg: [170, 150, 200],
-    block: [30, 200, 200],
-    blockHi: [200, 200, 30],
-    line: [0, 0, 0, 128],
-  },
+  text: "white",
+  background: ["blue", 200],
+  prompt: "yellow",
+  block: "white",
+  highlight: "black",
+  selection: ["red", 180],
+  guideline: "teal",
 };
 
 export { prompt, before, after, scheme };
 export const system = "prompt:character";
 
-// 🛑 Intercept specific input text with a custom reply.
-// function halt($, text) {
-//   if (text === "halt") {
-//     console.log("Halted:", text);
-//     return true;
-//   }
-// }
-
-// 💬 Receive each response in full.
-// function reply(text) {
-//   console.log("😀 Replied with:", text);
-// }
-
-// function copied(text) {
-//  return `${text} 🧌 https://aesthetic.computer/gargoyle`;
-// }
+// 🖼️ And an optional painting may be added.
+export const illustration = "@georgica/2023.7.24.17.02.58";
