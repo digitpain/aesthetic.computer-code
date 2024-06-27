@@ -5,5 +5,3 @@
 function brush({ pen, ink }) {
   ink().circle(pen.x, pen.y, 16, true);
 }
-
-export { brush };

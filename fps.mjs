@@ -15,4 +15,3 @@ function paint({ wipe }) {
 }
 
 export const system = "fps";
-export { boot, paint };
